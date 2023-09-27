@@ -1,6 +1,7 @@
 # Animal Shelter Tracker
+<p align="center> <img src="/AnimalShelter/wwwroot/Images/totoro.gif"> </p>
 
-#### By **Jordan K**
+### By **Jordan K, Julien Lenaz, Michael Connelly, Genesis Scott**
 
 A shelter management application that allows workers to manage different types of animals and their details.
 
@@ -44,4 +45,6 @@ If you come across any difficulties or wish to give feedback, don't hesitate to 
 
 If you have queries, feedback, or are interested in contributing to the codebase, feel free to get in touch.
 
-Copyright (c) 2023 Jordan Kennedy
+<img src="/AnimalShelter/wwwroot/Images/SQL_Map.png"/>
+
+Copyright (c) 2023 Jordan Kennedy, Genisis Scott, Michael Connelly, Julien Lenaz
