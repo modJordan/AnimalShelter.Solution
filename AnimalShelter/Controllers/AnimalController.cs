@@ -27,29 +27,40 @@ namespace AnimalShelter.Controllers
     }
 
     [HttpPost]
+    public ActionResult Create(string name, string breed, int age)
+    {
+
+      
+      // Animal myAnimal = new Animal(name, breed, age);
+      // _db.Animals.Add(myAnimal);
+      // _db.SaveChanges();
+      // return RedirectToAction("Index");
+    }
+
+    [HttpPost]
     public ActionResult Create(Animal animal)
     {
-      _db.Animals.Add(animal);
+      if (animal.Uid ==)
+        _db.Animals.Add(animal);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-
-    public ActionResult Details(int id)
+    public ActionResult Show(int id)
     {
-      Animal thisAnimal = _db.Animals.FirstOrDefault(animal => animal.uId == id);
+      Animal thisAnimal = _db.Animals.FirstOrDefault(animal => animal.Uid == id);
       return View(thisAnimal);
     }
 
     [HttpGet("/animals/{id}")]
     public ActionResult Show(int id)
     {
-      Animal animal = Animal.Find(id);
-      return View(animal);
+      Animal thisAnimal = Animal.Find(id);
+      return View(thisAnimal);
     }
-  
+
   }
 
- 
+
 }
 
 

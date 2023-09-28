@@ -7,11 +7,21 @@ namespace AnimalShelter.Controllers
 {
   public class HomeController : Controller
   {
-    private readonly AnimalShelterContext _db;
-
-    public HomeController(AnimalShelterContext db)
+    [HttpGet("/")]
+    public ActionResult Index()
     {
-      _db = db;
+      return View();
     }
-
+  }
 }
+   
+   
+   
+   
+   
+    // private readonly AnimalShelterContext _db;
+
+    // public HomeController(AnimalShelterContext db)
+    // {
+    //   _db = db;
+    // }

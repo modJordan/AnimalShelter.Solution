@@ -11,11 +11,6 @@
 @foreach (Animal animal in Model)
 {
   <h2>@animal.Name</h2>
-  <ul>
-  <li>@animal.Date</li>
-    <li>@animal.Breed</li>
-    <li>@animal.Age</li>
-  </ul>
-  <a href="">Click here to see @animal.Name</a>
+  <a href="/animal/{id}">Click here to see @animal.Name</a>
 
 }
