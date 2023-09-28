@@ -10,10 +10,7 @@ namespace AnimalShelter.Models;
 public class Animal
 {
 
-  public Animal(IConfiguration configuration)
-  {
-    _connectionString = configuration.GetConnectionString("DefaultConnection");
-  }
+
   public string Name { get; set; }
   public string Breed { get; set; }
 
@@ -31,48 +28,52 @@ public class Animal
     Age = age;
   }
 
-  public MySqlConnection GetConnection()
-  {
-    return new MySqlConnection(_connectionString);
-  }
+  // public MySqlConnection GetConnection()
+  // {
+  //   return new MySqlConnection(_connectionString);
+  // }
 
-  public static Animal Find(int Uid)
-  {
+  // public static Animal Find(int Uid)
+  // {
     
-    conn.Open();
+  //   conn.Open();
 
-    MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
-    cmd.CommandText = "SELECT * FROM animals WHERE Uid = @Uid;";
+  //   MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
+  //   cmd.CommandText = "SELECT * FROM animals WHERE Uid = @Uid;";
 
-    MySqlParameter param = new MySqlParameter();
-    param.ParameterName = "@Uid";
-    param.Value = Uid;
-    cmd.Parameters.Add(param);
+  //   MySqlParameter param = new MySqlParameter();
+  //   param.ParameterName = "@Uid";
+  //   param.Value = Uid;
+  //   cmd.Parameters.Add(param);
 
-    MySqlDataReader rdr = cmd.ExecuteReader() as MySqlDataReader;
-    int animalUId = 0;
-    string animalName = "";
-    string animalBreed = "";
-   string animalDate = "";
-    int animalAge = 0;
+  //   MySqlDataReader rdr = cmd.ExecuteReader() as MySqlDataReader;
+  //   int animalUId = 0;
+  //   string animalName = "";
+  //   string animalBreed = "";
+  //  string animalDate = "";
+  //   int animalAge = 0;
 
-    while (rdr.Read())
-    {
-      animalUId = rdr.GetInt32(0);
-      animalName = rdr.GetString(1);
-      animalBreed = rdr.GetString(2);
-      animalDate = rdr.GetString(3);
-      animalAge = rdr.GetInt32(4);
-    }
+  //   while (rdr.Read())
+  //   {
+  //     animalUId = rdr.GetInt32(0);
+  //     animalName = rdr.GetString(1);
+  //     animalBreed = rdr.GetString(2);
+  //     animalDate = rdr.GetString(3);
+  //     animalAge = rdr.GetInt32(4);
+  //   }
 
-    Animal foundAnimal = new Animal(animalName, animalBreed, animalUId, animalDate, animalAge);
+  //   Animal foundAnimal = new Animal(animalName, animalBreed, animalUId, animalDate, animalAge);
 
-    conn.Close();
-    if (conn != null)
-    {
-      conn.Dispose();
-    }
-    return foundAnimal;
-  }
+  //   conn.Close();
+  //   if (conn != null)
+  //   {
+  //     conn.Dispose();
+  //   }
+  //   return foundAnimal;
+  // }
 
+  // public Animal(IConfiguration configuration)
+  // {
+  //   _connectionString = configuration.GetConnectionString("DefaultConnection");
+  // }
 }
