@@ -1,0 +1,21 @@
+@using AnimalShelter.Models;
+@model Animal;
+
+<h1> Add a new Animal</h1>
+
+@using (Html.BeginForm())
+{
+
+  @Html.LabelFor(model=>model.Name)
+  @Html.TextBoxFor(model=>model.Name)
+  @Html.LabelFor(model=>model.Breed)
+  @Html.TextBoxFor(model => model.Breed)
+
+  @Html.DropDownListFor(model => model.Species, new SelectList(Enum.GetValues(typeof(Species))),
+  "Select Species")
+
+<input type="submit" value="Create" />
+}
+
+<p>@Html.ActionLink("Show all Animals", "Index")</p>
+
