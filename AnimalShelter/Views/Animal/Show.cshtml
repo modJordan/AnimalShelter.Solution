@@ -1,10 +1,11 @@
 @model AnimalShelter.Models.Animal;
 
-<h1>Animal Shelter</h1>
+<h1 class>Animal Shelter</h1>
 
 <h2>@Html.DisplayNameFor(model=>model.Name): @Html.DisplayFor(model=> model.Name)</h2>
 <ul>
   <li>@Html.DisplayNameFor(model=>model.Breed): @Html.DisplayFor(model=> model.Breed)</li>
+  <li>@Html.DisplayNameFor(model=>model.Species): @Html.DisplayFor(model=> model.Species)</li>
 </ul>
 
 <p>@Html.ActionLink("Back to List", "Index")</p>

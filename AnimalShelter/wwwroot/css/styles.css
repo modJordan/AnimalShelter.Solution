@@ -36,10 +36,10 @@ p {
   padding-left: 75px;
   padding-right: 75px;
   text-align: center;
-  border-color: linen;
+  border-color: green;
   border-width: 8px;
   border-style: groove;
-  background-color: lavender;
+  background-color: rgb(237, 255, 198);
   width: fit-content;
   height: fit-content;
   opacity: 0.8;
